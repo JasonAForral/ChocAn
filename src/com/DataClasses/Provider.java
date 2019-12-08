@@ -1,10 +1,11 @@
 package com.DataClasses;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Provider extends User{
 
-    private ArrayList<String> serviceCodes;
+    private final ArrayList<String> serviceCodes;
 
     public Provider(){
         super();
@@ -16,34 +17,30 @@ public class Provider extends User{
 
         //Builds a vector of initial serviceCodes.
         serviceCodes = new ArrayList<>();
-        for(int i = 6; i < userData.length; ++i){
-            serviceCodes.add(userData[i]);
-        }
+        serviceCodes.addAll(Arrays.asList(userData).subList(6, userData.length));
     }
 
     public String[] getServices() {
         //Gets an array of all serviceCodes
         if (serviceCodes == null)
             return null;
-        return serviceCodes.toArray(new String[serviceCodes.size()]);
+        return serviceCodes.toArray(new String[0]);
     }
 
-    public int removeService(String toRemove){
+    public void removeService(String toRemove){
         for(int i = 0; i < serviceCodes.size(); ++i){
             if(toRemove.equals(serviceCodes.get(i))){
                 serviceCodes.remove(i);
-                return 0;
+                return;
             }
         }
-        return -1;
     }
 
-    public int addService(String serviceName){
+    public void addService(String serviceName){
         if(serviceName == null){
-            return -1;
+            return;
         }
         serviceCodes.add(serviceName);
-        return 0;
     }
 
     public void display(){

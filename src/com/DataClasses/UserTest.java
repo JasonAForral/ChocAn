@@ -14,7 +14,7 @@ class UserTest {
     void build() {
         User myMember = new Member();
         String [] components = null;
-        String [] components2 = null;
+        String [] components2;
         if(myMember.build(components) != -1){
             fail("Build with null failed");
         }
@@ -38,7 +38,7 @@ class UserTest {
         }
         String [] data = myMember.getAll();
         for(int i = 0; i < 6; ++i){
-            if(data[i].equals(components[i]) == false){
+            if(!data[i].equals(components[i])){
                 fail("First build data not correct");
             }
         }
@@ -47,7 +47,7 @@ class UserTest {
         }
         data = myMember.getAll();
         for(int i = 0; i < 6; ++i){
-            if(data[i].equals(components2[i]) == false){
+            if(!data[i].equals(components2[i])){
                 System.out.println(components2[i]);
                 System.out.println(components[i]);
                 fail("Second build data not correct");
@@ -66,12 +66,12 @@ class UserTest {
         if(myMember.changeName(toChange) != -1){
             fail("Change name to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myMember.changeName(toChange) != 0){
             fail("Valid name change failed");
         }
         String check = myMember.get(0);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("Name does not match");
         }
     }
@@ -83,12 +83,12 @@ class UserTest {
         if(myMember.changeID(toChange) != -1){
             fail("Change ID to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myMember.changeID(toChange) != 0){
             fail("Valid ID change failed");
         }
         String check = myMember.get(1);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("ID does not match");
         }
     }
@@ -100,12 +100,12 @@ class UserTest {
         if(myMember.changeAddress(toChange) != -1){
             fail("Change address to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myMember.changeAddress(toChange) != 0){
             fail("Valid address change failed");
         }
         String check = myMember.get(2);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("Address does not match");
         }
     }
@@ -117,12 +117,12 @@ class UserTest {
         if(myMember.changeCity(toChange) != -1){
             fail("Change City to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myMember.changeCity(toChange) != 0){
             fail("Valid city change failed");
         }
         String check = myMember.get(3);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("City does not match");
         }
     }
@@ -134,12 +134,12 @@ class UserTest {
         if(myMember.changeState(toChange) != -1){
             fail("Change state to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myMember.changeState(toChange) != 0){
             fail("Valid state change failed");
         }
         String check = myMember.get(4);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("State does not match");
         }
     }
@@ -151,12 +151,12 @@ class UserTest {
         if(myMember.changeZip(toChange) != -1){
             fail("Change zip to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myMember.changeZip(toChange) != 0){
             fail("Valid zip change failed");
         }
         String check = myMember.get(5);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("Zip does not match");
         }
     }
@@ -169,17 +169,18 @@ class UserTest {
         buildUser(0, components);
         myMember.build(components);
         for(int i = 0; i < 6; ++i){
-            if(components[i].equals(myMember.get(i)) == false){
+            if(!components[i].equals(myMember.get(i))){
                 fail("Get report item failed.");
             }
         }
     }
 
     private int buildUser(int line, String [] components){
-        file = new File("data/users.csv");
+        File file = new File("data/users.csv");
         if(file == null){
             return -1;
         }
+        Scanner sc;
         try {
             sc = new Scanner(file);
         } catch (FileNotFoundException e) {
@@ -197,6 +198,4 @@ class UserTest {
     }
 
 
-    private File file;
-    private Scanner sc;
 }

@@ -31,28 +31,27 @@ public class ReadWrite
         }
     }
 
-    public static int fileWrite(String filename, String data, boolean append) throws IOException
+    public static void fileWrite(String filename, String data, boolean append) throws IOException
     {
         FileWriter file;
         int i;
 
         if(data== null)
-            return -1;
+            return;
 
         file = new FileWriter(filename, append);
         file.write(data);
         file.write('\n');
         file.close();
-        return 1;
     }
 
-    public static int fileWrite(String filename, String[] data, boolean append) throws IOException
+    public static void fileWrite(String filename, String[] data, boolean append) throws IOException
     {
         FileWriter file;
         int i;
 
         if (data == null)
-            return -1;
+            return;
 
         file = new FileWriter(filename, append);
         for(i = 0; i < data.length - 1; ++i)
@@ -65,6 +64,5 @@ public class ReadWrite
         file.write('\n');
 
         file.close();
-        return 1;
     }
 }

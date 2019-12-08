@@ -27,7 +27,7 @@ public class MemberReport extends Report{
             }
         }
         if(services == null){
-            services = new Vector<String []>();
+            services = new Vector<>();
         }
         services.add(service);
         return 0;
@@ -43,9 +43,8 @@ public class MemberReport extends Report{
 
         System.out.println("These are the services that were provided.");
         int size = services.size();
-        for(int i = 0; i < size; ++i){
-            String [] service = services.get(i);
-            for(int j = 0; j < 3; ++j){
+        for (String[] service : services) {
+            for (int j = 0; j < 3; ++j) {
                 System.out.println(service[j]);
             }
         }

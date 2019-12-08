@@ -5,7 +5,6 @@ import com.ReadWrite.ReadWrite;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.TreeMap;
 
 public class DataBaseManager<Object> {
@@ -14,12 +13,12 @@ public class DataBaseManager<Object> {
     Returns the number of objects added to the tree.
      */
 
-    private TreeMap<String, Object> managers;
-    private TreeMap<String, Object> providers;
-    private TreeMap<String, Object> members;
-    private TreeMap<String, Object> services;
-    private TreeMap<String, ArrayList> memberRecords;
-    private TreeMap<String, ArrayList> providerRecords;
+    private final TreeMap<String, Object> managers;
+    private final TreeMap<String, Object> providers;
+    private final TreeMap<String, Object> members;
+    private final TreeMap<String, Object> services;
+    private final TreeMap<String, ArrayList> memberRecords;
+    private final TreeMap<String, ArrayList> providerRecords;
 
     public DataBaseManager() {
         this.managers = buildTree("data/users/managers.csv");
@@ -200,7 +199,7 @@ public class DataBaseManager<Object> {
                 case (4):
                     ArrayList<Record> memRecords= memberRecords.get(key);
                     if(memRecords == null){
-                        memRecords = new ArrayList<Record>();
+                        memRecords = new ArrayList<>();
                         memRecords.add((Record) obj);
                         memberRecords.put(key, memRecords);
                     }else {
@@ -210,7 +209,7 @@ public class DataBaseManager<Object> {
                 case (5):
                     ArrayList<Record> provRecords= providerRecords.get(key);
                     if(provRecords == null){
-                        provRecords = new ArrayList<Record>();
+                        provRecords = new ArrayList<>();
                         provRecords.add((Record) obj);
                         providerRecords.put(key, provRecords);
                     }else {
@@ -230,7 +229,7 @@ public class DataBaseManager<Object> {
     Returns a reference to the previous object associated with the id,
     or null if there was no object associated with the id.
      */
-    public Object updateTreeData(int type, String key, Object obj){
+    public void updateTreeData(int type, String key, Object obj){
         /*
         Each tree has it's own integer code
         0 - MANAGER
@@ -243,19 +242,23 @@ public class DataBaseManager<Object> {
         switch(type) {
 
             case (0):
-                return managers.replace(key, obj);
+                managers.replace(key, obj);
+                return;
             case (1):
-                return providers.replace(key, obj);
+                providers.replace(key, obj);
+                return;
             case (2):
-                return members.replace(key, obj);
+                members.replace(key, obj);
+                return;
             case (3):
-                return services.replace(key, obj);
+                services.replace(key, obj);
+                return;
             case (4):
-                return (Object) memberRecords.replace(key, (ArrayList) obj);
+                memberRecords.replace(key, (ArrayList) obj);
+                return;
             case (5):
-                return (Object) providerRecords.replace(key, (ArrayList) obj);
+                providerRecords.replace(key, (ArrayList) obj);
         }
-        return null;
     }
 
     protected ArrayList getAll(int type) {
@@ -313,7 +316,7 @@ public class DataBaseManager<Object> {
         3 - SERVICE
          */
 
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         // Determines first line of file
         String[] firstLine = {"Manager", "Provider", "Member", "Directory"};

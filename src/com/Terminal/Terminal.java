@@ -257,16 +257,16 @@ public class Terminal extends IOAuthorization {
       );
       breadcrumbPrompt();
       choice = getChoice();
-      String MID = null;
+      String memberID;
 
       switch (choice) {
         case '1': // view
           System.out.println("Enter member ID");
-          MID = getID(userType.MEMBER);
-          if(MID == null){
+          memberID = getID(userType.MEMBER);
+          if(memberID == null){
             break;
           }
-          String [] components = overlord.getMember(MID);
+          String [] components = overlord.getMember(memberID);
           System.out.println("Member info");
           display(components);
           break;
@@ -278,27 +278,27 @@ public class Terminal extends IOAuthorization {
           break;
         case '4': // delete
           System.out.println("Enter member ID");
-          MID = getID(userType.MEMBER);
-          if(MID == null){
+          memberID = getID(userType.MEMBER);
+          if(memberID == null){
             break;
           }
-          overlord.removeMember(MID);
+          overlord.removeMember(memberID);
           break;
         case '5': // suspend
           System.out.println("Enter member ID");
-          MID = getID(userType.MEMBER);
-          if(MID == null){
+          memberID = getID(userType.MEMBER);
+          if(memberID == null){
             break;
           }
-          overlord.suspendMember(MID);
+          overlord.suspendMember(memberID);
           break;
         case '6':
           System.out.println("Enter member ID");
-          MID = getID(userType.MEMBER);
-          if(MID == null){
+          memberID = getID(userType.MEMBER);
+          if(memberID == null){
             break;
           }
-          overlord.renewMember(MID);
+          overlord.renewMember(memberID);
           break;
         case 'q':
           break;
@@ -327,16 +327,16 @@ public class Terminal extends IOAuthorization {
       );
       breadcrumbPrompt();
       choice = getChoice();
-      String PID = null;
+      String providerID;
 
       switch (choice) {
         case '1': // view
           System.out.println("Enter provider ID");
-          PID = getID(userType.PROVIDER);
-          if(PID == null){
+          providerID = getID(userType.PROVIDER);
+          if(providerID == null){
             break;
           }
-          String [] components = overlord.getProvider(PID);
+          String [] components = overlord.getProvider(providerID);
           System.out.println("Provider info");
           display(components);
           break;
@@ -348,8 +348,8 @@ public class Terminal extends IOAuthorization {
           break;
         case '4': // delete
           System.out.println("Enter provider ID");
-          PID = getID(userType.PROVIDER);
-          if(PID == null){
+          providerID = getID(userType.PROVIDER);
+          if(providerID == null){
             break;
           }
           overlord.removeProvider("");
@@ -381,15 +381,15 @@ public class Terminal extends IOAuthorization {
       );
       breadcrumbPrompt();
       choice = getChoice();
-      String SID = null;
+      String serviceID;
       switch (choice){
         case '1': // view
           System.out.println("Enter service code");
-          SID = getID(userType.SERVICE);
-          if(SID == null){
+          serviceID = getID(userType.SERVICE);
+          if(serviceID == null){
             break;
           }
-          String [] components = overlord.getService(SID);
+          String [] components = overlord.getService(serviceID);
           System.out.println("Service info");
           display(components);
           break;
@@ -401,11 +401,11 @@ public class Terminal extends IOAuthorization {
           break;
         case '4': // delete
           System.out.println("Enter service code");
-          SID = getID(userType.SERVICE);
-          if(SID == null){
+          serviceID = getID(userType.SERVICE);
+          if(serviceID == null){
             break;
           }
-          overlord.removeService(SID);
+          overlord.removeService(serviceID);
           break;
         case 'q':
           break;
@@ -437,25 +437,25 @@ public class Terminal extends IOAuthorization {
       );
       breadcrumbPrompt();
       choice = getChoice();
-      String SID = null;
+      String serviceId;
       switch (choice){
         case '1': // view
           overlord.viewDirectory(PID);
           break;
         case '2': // add
           System.out.println("Enter service code");
-          SID = getID(userType.SERVICE);
-          if(SID == null){
+          serviceId = getID(userType.SERVICE);
+          if(serviceId == null){
             break;
           }
-          addService(PID, SID);
+          addService(PID, serviceId);
           break;
         case '3': // delete
-          SID = getID(userType.SERVICE);
-          if(SID == null){
+          serviceId = getID(userType.SERVICE);
+          if(serviceId == null){
             break;
           }
-          overlord.removeService(SID);
+          overlord.removeService(serviceId);
           break;
         case 'q':
           break;
@@ -482,24 +482,24 @@ public class Terminal extends IOAuthorization {
           );
           breadcrumbPrompt();
           choice = getChoice();
-          String MID = null;
-          String PID = null;
+          String memberID;
+          String providerID;
           switch (choice){
               case '1': // view
                   System.out.println("Enter member ID");
-                  MID = getID(userType.MEMBER);
-                  if(MID == null){
+                  memberID = getID(userType.MEMBER);
+                  if(memberID == null){
                       break;
                   }
-                  overlord.genMemberReport(MID);
+                  overlord.genMemberReport(memberID);
                   break;
               case '2': // add
                   System.out.println("Enter service code");
-                  PID = getID(userType.PROVIDER);
-                  if(PID == null){
+                  providerID = getID(userType.PROVIDER);
+                  if(providerID == null){
                       break;
                   }
-                  overlord.genProviderReport(PID);
+                  overlord.genProviderReport(providerID);
                   break;
               case '3': // delete
                   overlord.genAllMemberReports();
@@ -520,14 +520,9 @@ public class Terminal extends IOAuthorization {
     if(toDisplay == null){
       return;
     }
-    for(int i = 0; i < toDisplay.length; ++i){
-      System.out.println(toDisplay[i]);
+    for (String s : toDisplay) {
+      System.out.println(s);
     }
-  }
-  private String getLine(){
-    String line = null;
-
-    return line;
   }
 
   private void breadcrumbPrompt() {
@@ -567,7 +562,7 @@ public class Terminal extends IOAuthorization {
     returnCode = overlord.memberCheckIn(memberID);
     if (returnCode < 0) {
       System.out.println("\nInvalid Member");
-      System.out.println("");
+      System.out.println();
       return false;
     }
 
@@ -582,8 +577,8 @@ public class Terminal extends IOAuthorization {
   }
 
   private String getID(userType type) {
-    String name = null;
-    int length = 0;
+    String name;
+    int length;
     if(type == userType.MEMBER){
       name = "Member ID";
       length = 9;
@@ -600,8 +595,8 @@ public class Terminal extends IOAuthorization {
       return null;
     }
     String input;
-    String quit = new String("q");
-    boolean rejected = true;
+    String quit = "q";
+    boolean rejected;
     do {
       System.out.println("Press q to quit.");
       System.out.printf("Enter %s: ", name);
@@ -700,7 +695,7 @@ public class Terminal extends IOAuthorization {
           case text:
             rejected = validateTextLength(input, field.maxLength) < 0;
             if (rejected)
-              System.out.printf("\nEntered is too long\n");
+              System.out.print("\nEntered is too long\n");
             break;
           case id:
             rejected = validateID(input, field.maxLength) < 0;
@@ -814,11 +809,9 @@ public class Terminal extends IOAuthorization {
     //todo needs testing
   }
 
-  private boolean generateChocAnBill() {
+  private void generateChocAnBill() {
       System.out.println("Sending a bill to ChocAn.");
       overlord.generateBill();
-      return true;
-
   }
 
 }

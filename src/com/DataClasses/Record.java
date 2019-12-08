@@ -15,19 +15,19 @@ public class Record {
     }
 
     //THIS FUNCTION MUST BE CALLED FIRST
-    public int build(String [] components){
+    public void build(String [] components){
         //Builds a record from ana array of Strings.
         //The order is the order of Strings in
         //The private data section.
         if(components == null){
-            return -1;
+            return;
         }
         if(components.length != 7){
-            return -1;
+            return;
         }
         for(int i = 0; i < 7; ++i){
             if(components[i] == null){
-                return -1;
+                return;
             }
         }
         this.currDateTime = components[0];
@@ -37,7 +37,6 @@ public class Record {
         this.serviceCode = components[4];
         this.comment = components[5];
         this.cost = components[6];
-        return 0;
     }
 
     public String [] getAll(){

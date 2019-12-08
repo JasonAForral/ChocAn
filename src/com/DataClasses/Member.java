@@ -26,16 +26,15 @@ public class Member extends User{
         return status;
     }
 
-    public int updateStatus(String update){
+    public void updateStatus(String update){
         if(update == null)
-            return -1;
+            return;
         this.status = update;
         if(status.equals("Valid"))
             this.valid = 1;
         else
             this.valid = 0;
 
-        return 1;
     }
 
     public String[] toStringArray() {

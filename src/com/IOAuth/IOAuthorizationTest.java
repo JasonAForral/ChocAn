@@ -25,6 +25,7 @@ class IOAuthorizationTest {
   @CsvFileSource(resources =  "tests/menutests.csv")
   void validateMenu(String input, int expected) {
     assertEquals(expected, IO.validateMenu(input, 8), String.format("%s expects %d", input, expected));
+    assertEquals(expected, IO.validateMenu(input, 9), String.format("%s expects %d", input, expected));
   }
 
   @ParameterizedTest(name = "{3}")

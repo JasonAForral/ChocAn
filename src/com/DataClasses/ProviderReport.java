@@ -63,8 +63,7 @@ public class ProviderReport extends Report{
 
         System.out.println("These are the services that were provided.");
         int size = services.size();
-        for (int i = 0; i < size; ++i) {
-            String[] service = services.get(i);
+        for (String[] service : services) {
             for (int j = 0; j < 6; ++j) {
                 System.out.println(service[j]);
             }
@@ -84,7 +83,7 @@ public class ProviderReport extends Report{
         //1 - Provider info
         //2 - number of services provided
         //3 - total fee of all services
-        //4 - each cell contains a comma seperated list of services
+        //4 - each cell contains a comma separated list of services
         String [] components = new String [3 + services.size()];
         components[0] = super.name + "," + super.number + "," + super.address + "," + super.city + "," + super.state + "," + super.zip;
         components[1] = Integer.toString(number);

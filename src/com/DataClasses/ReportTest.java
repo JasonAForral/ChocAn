@@ -14,8 +14,8 @@ class ReportTest {
     void build() {
         User myMember = null;
         MemberReport myReport = new MemberReport();
-        String [] components = null;
-        String [] components2 = null;
+        String [] components;
+        String [] components2;
         if(myReport.build(myMember) != -1){
             fail("Build report with null failed");
         }
@@ -52,12 +52,12 @@ class ReportTest {
         if(myReport.changeName(toChange) != -1){
             fail("Change name to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myReport.changeName(toChange) != 0){
             fail("Valid name change failed");
         }
         String check = myReport.get(0);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("Name does not match");
         }
     }
@@ -69,12 +69,12 @@ class ReportTest {
         if(myReport.changeID(toChange) != -1){
             fail("Change ID to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myReport.changeID(toChange) != 0){
             fail("Valid ID change failed");
         }
         String check = myReport.get(1);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("ID does not match");
         }
     }
@@ -86,12 +86,12 @@ class ReportTest {
         if(myReport.changeAddress(toChange) != -1){
             fail("Change address to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myReport.changeAddress(toChange) != 0){
             fail("Valid address change failed");
         }
         String check = myReport.get(2);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("Address does not match");
         }
     }
@@ -103,12 +103,12 @@ class ReportTest {
         if(myReport.changeCity(toChange) != -1){
             fail("Change City to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myReport.changeCity(toChange) != 0){
             fail("Valid city change failed");
         }
         String check = myReport.get(3);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("City does not match");
         }
     }
@@ -120,12 +120,12 @@ class ReportTest {
         if(myReport.changeState(toChange) != -1){
             fail("Change state to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myReport.changeState(toChange) != 0){
             fail("Valid state change failed");
         }
         String check = myReport.get(4);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("State does not match");
         }
     }
@@ -137,12 +137,12 @@ class ReportTest {
         if(myReport.changeZip(toChange) != -1){
             fail("Change zip to null failed");
         }
-        toChange = new String("Test");
+        toChange = "Test";
         if(myReport.changeZip(toChange) != 0){
             fail("Valid zip change failed");
         }
         String check = myReport.get(5);
-        if(check.equals(toChange) == false){
+        if(!check.equals(toChange)){
             fail("Zip does not match");
         }
     }
@@ -157,17 +157,18 @@ class ReportTest {
         MemberReport myReport = new MemberReport();
         myReport.build(myMember);
         for(int i = 0; i < 6; ++i){
-            if(components[i].equals(myReport.get(i)) == false){
+            if(!components[i].equals(myReport.get(i))){
                 fail("Get report item failed.");
             }
         }
     }
 
     private int buildUser(int line, String [] components){
-        file = new File("data/users.csv");
+        File file = new File("data/users.csv");
         if(file == null){
             return -1;
         }
+        Scanner sc;
         try {
             sc = new Scanner(file);
         } catch (FileNotFoundException e) {
@@ -183,6 +184,5 @@ class ReportTest {
         }
         return 0;
     }
-    private File file;
-    private Scanner sc;
+
 }

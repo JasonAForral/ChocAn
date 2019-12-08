@@ -2,9 +2,9 @@ package com.DataClasses;
 
 public class Service {
 
-    private String name;
-    private String ID;
-    private String cost;
+    private final String name;
+    private final String ID;
+    private final String cost;
 
     public Service(){
         name = null;

@@ -1,13 +1,9 @@
 package com.Overlord;
 
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.io.TempDir;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,7 +40,7 @@ class OverlordTest {
     System.out.println("Testing: logging out");
 
     overlord.login(0, "123456789");
-    assertEquals(1,overlord.logout(), "log out returns 1");
+    overlord.logout();
   }
 
   @ParameterizedTest(name = "{2}")

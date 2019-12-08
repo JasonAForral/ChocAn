@@ -59,7 +59,7 @@ public class Overlord extends DataBaseManager<Object> {
 
       // Fetch all services from service tree
       if (currentUser instanceof Provider) {
-        currentServices = new ArrayList<Service>();
+        currentServices = new ArrayList<>();
         String[] services = ((Provider) currentUser).getServices();
         Service service;
         for (String i : services) {
@@ -112,14 +112,13 @@ public class Overlord extends DataBaseManager<Object> {
    *
    * @return 1 and cannot fail.
    */
-  public int logout() {
+  public void logout() {
     // Need to write all trees to disk on logout
     if(!writeToDisk())
       System.out.println("Failed to write memory data to disk.");
     this.currentUser = null;
     this.currentMember = null;
     this.currentServices = null;
-    return 1;
   }
 
   /**
@@ -410,15 +409,15 @@ public class Overlord extends DataBaseManager<Object> {
       return -1;
     }
   }
-  public int genProviderReport(String providerID) {
+  public void genProviderReport(String providerID) {
     if (providerID == null)
-      return -1;
+      return;
     try {
 
       Provider current = (Provider) findData(1, providerID);
 
       if (current == null)
-        return -1;
+        return;
 
       String outputFile = "data/reports/providers/" + providerID + ".txt";
 
@@ -439,7 +438,7 @@ public class Overlord extends DataBaseManager<Object> {
             fee += Integer.parseInt(record[6]);
           }
           catch(NumberFormatException e){
-            return -1;
+            return;
           }
         ReadWrite.fileWrite(outputFile, record, true);
       }
@@ -448,36 +447,31 @@ public class Overlord extends DataBaseManager<Object> {
         ReadWrite.fileWrite(outputFile, "Total Services: " + number, true);
       }
       catch(Exception e){
-        return -1;
+        return;
       }
       try{
         String totalFee = Integer.toString(fee);
         ReadWrite.fileWrite(outputFile, "Total Fees: $" + totalFee + ".00", true);
       }
       catch(Exception e){
-        return -1;
       }
 
 
-      return 1;
     }
     catch (ClassCastException | IOException a) {
-      return -1;
     }
   }
-  public int genAllMemberReports() {
+  public void genAllMemberReports() {
     ArrayList<Member> member = getAll(2);
     for(Member i : member){
       genMemberReport(i.get(1));
     }
-    return 0;
   }
-  public int genAllProvidersReports() {
+  public void genAllProvidersReports() {
     ArrayList<Provider> provider = getAll(1);
     for(Provider i : provider){
       genProviderReport(i.get(1));
     }
-    return 0;
   }
 
   public String[] getMember(String code){
@@ -525,7 +519,6 @@ public class Overlord extends DataBaseManager<Object> {
       }
     }
     catch (ClassCastException a) {
-      return;
     }
   }
   public void viewProviders(){
@@ -539,7 +532,6 @@ public class Overlord extends DataBaseManager<Object> {
       }
     }
     catch (ClassCastException a) {
-      return;
     }
   }
   public void viewServices(){
@@ -553,7 +545,6 @@ public class Overlord extends DataBaseManager<Object> {
       }
     }
     catch (ClassCastException a) {
-      return;
     }
   }
   public void viewDirectory(String PID){
@@ -572,7 +563,6 @@ public class Overlord extends DataBaseManager<Object> {
         i.display();
     }
     catch (ClassCastException a) {
-      return;
     }
   }
 
@@ -643,17 +633,15 @@ public class Overlord extends DataBaseManager<Object> {
     return 1;
   }
 
-  public int generateBill() {
+  public void generateBill() {
     if (currentUser == null)
-      return -2;
+      return;
     try{
       Provider currentProvider = (Provider) currentUser;
       String PID = currentProvider.get(1);
       genProviderReport(PID);
     }
     catch(ClassCastException e){
-      return -1;
     }
-    return 0;
   }
 }
