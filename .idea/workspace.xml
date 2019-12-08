@@ -397,70 +397,86 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed provider reports" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="563" y="175" key="#All_in_ChocAn" />
-    <state x="563" y="175" key="#All_in_ChocAn/0.0.1920.1040@0.0.1920.1040" />
-    <state x="686" y="172" key="#Main" />
-    <state x="686" y="172" key="#Main/0.0.1920.1040@0.0.1920.1040" />
-    <state x="371" y="92" key="#OverlordTest" />
-    <state x="371" y="92" key="#OverlordTest/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state x="371" y="92" key="#UserTest" />
-    <state x="371" y="92" key="#UserTest/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state x="223" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
-    <state x="223" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state x="223" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" />
-    <state x="623" y="254" key="#com.intellij.ide.util.TreeClassChooserDialog" />
-    <state x="498" y="201" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" />
-    <state x="623" y="254" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" />
-    <state x="620" y="303" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" />
-    <state x="620" y="303" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" />
-    <state x="520" y="157" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" />
-    <state x="520" y="157" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state x="520" y="157" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" />
-    <state x="375" y="11" width="1407" height="798" key="CommitChangelistDialog2" />
-    <state x="14" y="11" width="1407" height="798" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state x="375" y="11" width="1005" height="802" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" />
-    <state x="18" y="14" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" />
-    <state width="1493" height="319" key="GridCell.Tab.0.bottom" />
-    <state width="1493" height="319" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" />
-    <state width="1493" height="319" key="GridCell.Tab.0.center" />
-    <state width="1493" height="319" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" />
-    <state width="1493" height="319" key="GridCell.Tab.0.left" />
-    <state width="1493" height="319" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" />
-    <state width="1493" height="319" key="GridCell.Tab.0.right" />
-    <state width="1493" height="319" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" />
-    <state x="601" y="125" key="RollbackChangesDialog" />
-    <state x="601" y="125" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" />
-    <state x="352" y="0" key="SettingsEditor" />
-    <state x="352" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" />
-    <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" />
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" />
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" />
-    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" />
-    <state x="498" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" />
-    <state x="498" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" />
-    <state x="2651" y="251" key="com.intellij.testIntegration.createTest.CreateTestDialog" />
-    <state x="2651" y="251" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" />
-    <state x="620" y="271" key="git4idea.merge.GitPullDialog" />
-    <state x="496" y="215" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" />
-    <state x="620" y="271" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" />
-    <state x="209" y="38" key="new project wizard" />
-    <state x="209" y="38" key="new project wizard/0.0.1536.824@0.0.1536.824" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" />
+    <state x="563" y="175" key="#All_in_ChocAn" timestamp="1575771277912" />
+    <state x="563" y="175" key="#All_in_ChocAn/0.0.1920.1040@0.0.1920.1040" timestamp="1575771277913" />
+    <state x="686" y="172" key="#Main" timestamp="1575771277913" />
+    <state x="686" y="172" key="#Main/0.0.1920.1040@0.0.1920.1040" timestamp="1575771277913" />
+    <state x="371" y="92" key="#OverlordTest" timestamp="1575771277913" />
+    <state x="371" y="92" key="#OverlordTest/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state x="371" y="92" key="#UserTest" timestamp="1575771277913" />
+    <state x="371" y="92" key="#UserTest/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state x="223" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575771277913" />
+    <state x="223" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state x="223" y="69" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state x="623" y="254" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1575771277913" />
+    <state x="498" y="201" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state x="623" y="254" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575771277913" />
+    <state x="620" y="303" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575771309734">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="620" y="303" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1575771309734" />
+    <state x="520" y="157" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1575771277913" />
+    <state x="520" y="157" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state x="520" y="157" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state x="375" y="11" width="1407" height="798" key="CommitChangelistDialog2" timestamp="1575771389549">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="14" y="11" width="1407" height="798" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state x="375" y="11" width="1005" height="802" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1575771389549" />
+    <state x="18" y="14" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1575771277913" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1575771277913" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1575771349237">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="319" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1575771277913" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1575771349237" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1575771349236">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="319" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1575771277913" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1575771349236" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1575771349236">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="319" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1575771277913" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1575771349236" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1575771349236">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="319" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1575771277913" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1575771349236" />
+    <state x="601" y="125" key="RollbackChangesDialog" timestamp="1575771376734">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="601" y="125" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1575771376734" />
+    <state x="352" y="0" key="SettingsEditor" timestamp="1575771277913" />
+    <state x="352" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1575771277913" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2" timestamp="1575771277913" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state x="361" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1575771296626">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1575771277913" />
+    <state x="477" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1575771296626" />
+    <state x="498" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575771277913" />
+    <state x="498" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state x="2651" y="251" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1575771277913" />
+    <state x="2651" y="251" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1575771277913" />
+    <state x="620" y="271" key="git4idea.merge.GitPullDialog" timestamp="1575771277913" />
+    <state x="496" y="215" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state x="620" y="271" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575771277913" />
+    <state x="209" y="38" key="new project wizard" timestamp="1575771277913" />
+    <state x="209" y="38" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1575771277913" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1575771277913" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1575771277913" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -477,11 +493,11 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ChocAn2$Main.ic" NAME="Main Coverage Results" MODIFIED="1575489228719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/ChocAn2$UserTest.ic" NAME="UserTest Coverage Results" MODIFIED="1575489648123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.DataClasses.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ChocAn2$Main.ic" NAME="Main Coverage Results" MODIFIED="1575489228719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.*</FILTER>
     </SUITE>
   </component>
 </project>
