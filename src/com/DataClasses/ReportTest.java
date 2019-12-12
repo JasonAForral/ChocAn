@@ -164,7 +164,7 @@ class ReportTest {
     }
 
     private int buildUser(int line, String [] components){
-        File file = new File("data/users.csv");
+        File file = new File("data/users/members.csv");
         if(file == null){
             return -1;
         }

@@ -275,8 +275,8 @@ class OverlordTest {
 
   @ParameterizedTest(name = "{2}")
   @CsvSource({
-          "100010001,0,member doesn't exist",
-          "123456789,1,member exists",
+          "100010001,false,member doesn't exist",
+          "123456789,true,member exists",
   })
   void getMember(String id, boolean expectNotNull, String message) {
     if (expectNotNull) {
@@ -288,8 +288,8 @@ class OverlordTest {
 
   @ParameterizedTest(name = "{2}")
   @CsvSource({
-          "000000000,0,provider doesn't exist",
-          "123456789,1,provider exists",
+          "000000000,false,provider doesn't exist",
+          "123456789,true,provider exists",
   })
   void getProvider(String id, boolean expectNotNull, String message) {
     if (expectNotNull) {

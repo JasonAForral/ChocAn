@@ -1,6 +1,8 @@
 package com.DataClasses;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -162,21 +164,30 @@ class UserTest {
     }
 
 
-    @Test
-    void get() {
+    @ParameterizedTest(name = "get({0})")
+    @CsvSource({
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+    })
+    void get(int i) {
         Member myMember = new Member();
         String [] components = new String [6];
         buildUser(0, components);
         myMember.build(components);
-        for(int i = 0; i < 6; ++i){
-            if(!components[i].equals(myMember.get(i))){
-                fail("Get report item failed.");
-            }
-        }
+        //for(int i = 0; i < 6; ++i){
+//            if(!components[i].equals(myMember.get(i))){
+//                fail("Get report item failed.");
+//            }
+        //}
+        assertEquals(components[i], myMember.get(i));
     }
 
     private int buildUser(int line, String [] components){
-        File file = new File("data/users.csv");
+        File file = new File("data/users/members.csv");
         if(file == null){
             return -1;
         }
