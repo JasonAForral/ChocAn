@@ -1,4 +1,5 @@
 # ChocAn
+[![Build Status](https://travis-ci.org/JasonAForral/ChocAn.svg?branch=master)](https://travis-ci.org/JasonAForral/ChocAn)
 
 Grant me the security to authenticate and
  authorize the things, and hash all passwords.
