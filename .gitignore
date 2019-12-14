@@ -23,7 +23,7 @@
 hs_err_pid*
 
 ##.idea/*
-.idea/**/workspace.xml
+#.idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
@@ -52,3 +52,6 @@ out/
 *.swp
 *.swo
 .idea/codeStyles/codeStyleConfig.xml
+
+workspace.xml
+./.idea/workspace.xml
